@@ -2,7 +2,7 @@
 const localDb = require('./localDbHandler');
 const mongoDb = require('./mongoDbHandler');
 
-const USED_DB = process.env.USED_DB || 'local'; // Set this in your .env file or default to 'local'
+const USED_DB = process.env.USED_DB || 'mongo'; // Set this in your .env file or default to 'local'
 
 let dbHandler;
 
