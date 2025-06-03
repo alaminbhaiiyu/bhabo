@@ -1,7 +1,7 @@
 // database/mongoDbHandler.js
 const mongoose = require('mongoose');
 
-const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/bhabo_db';
+const MONGO_URI = process.env.MONGO_URI || 'mongodb+srv://ikalamin0:alamin122@cluster0.9pirjx3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 
 mongoose.connect(MONGO_URI)
     .then(() => console.log('MongoDB connected successfully'))
