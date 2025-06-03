@@ -1,0 +1,192 @@
+/* web/create_post.css */
+
+.create-post-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top */
+    padding-top: 50px; /* Add some space from the top */
+    min-height: calc(100vh - 50px); /* Adjust height for content */
+}
+
+.create-post-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px; /* Max width for the post card */
+}
+
+.create-post-card h3 {
+    color: #1877f2;
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.create-post-form .form-group {
+    margin-bottom: 25px;
+}
+
+.create-post-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #333;
+    font-size: 1.1em;
+}
+
+.create-post-form textarea {
+    width: calc(100% - 24px); /* Account for padding */
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1.05em;
+    min-height: 150px; /* Taller textarea */
+    resize: vertical;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fefefe;
+}
+
+.create-post-form textarea:focus {
+    border-color: #1877f2;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(24, 119, 242, 0.25);
+}
+
+.create-post-form input[type="file"] {
+    display: block;
+    width: 100%;
+    padding: 12px; /* Increased padding for file input */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    font-size: 1em;
+    color: #555;
+}
+
+.create-post-form input[type="file"]::-webkit-file-upload-button {
+    background-color: #4CAF50; /* Green button for file upload */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 15px;
+}
+
+.create-post-form input[type="file"]::-webkit-file-upload-button:hover {
+    background-color: #45a049;
+}
+
+
+.media-preview {
+    margin-top: 20px;
+    text-align: center;
+    border: 1px dashed #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fdfdfd;
+}
+
+.media-preview img,
+.media-preview video {
+    max-width: 100%;
+    max-height: 300px; /* Larger preview */
+    border-radius: 8px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.media-preview button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.media-preview button:hover {
+    background-color: #da190b;
+}
+
+.create-post-form button[type="submit"] {
+    width: 100%;
+    padding: 18px; /* Larger button */
+    background-color: #1877f2;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 30px;
+}
+
+.create-post-form button[type="submit"]:hover {
+    background-color: #166fe5;
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .create-post-content {
+        padding: 20px;
+        padding-top: 30px;
+    }
+    .create-post-card {
+        padding: 20px;
+    }
+    .create-post-card h3 {
+        font-size: 1.6em;
+        margin-bottom: 20px;
+    }
+    .create-post-form textarea {
+        min-height: 120px;
+        padding: 12px;
+    }
+    .create-post-form button[type="submit"] {
+        padding: 14px;
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .create-post-content {
+        padding: 15px;
+        padding-top: 20px;
+    }
+    .create-post-card {
+        border-radius: 8px;
+    }
+    .create-post-card h3 {
+        font-size: 1.4em;
+    }
+    .create-post-form label {
+        font-size: 1em;
+    }
+    .create-post-form textarea {
+        font-size: 0.95em;
+    }
+    .create-post-form input[type="file"]::-webkit-file-upload-button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+    .media-preview img,
+    .media-preview video {
+        max-height: 180px;
+    }
+    .media-preview button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+}

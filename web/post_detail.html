@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="postDetailPageTitle">Bhabo - Post</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/post_detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">Bhabo</div>
+            <nav class="main-nav">
+                <button class="nav-button" onclick="window.location.href='/'">
+                    <i class="fas fa-home"></i> Home
+                </button>
+                <button class="nav-button" onclick="window.location.href='/search.html'">
+                    <i class="fas fa-search"></i> Search
+                </button>
+                <button class="nav-button" onclick="window.location.href='/create_post.html'">
+                    <i class="fas fa-plus-square"></i> Post
+                </button>
+                <button class="nav-button" onclick="window.location.href='/chat.html'">
+                    <i class="fas fa-envelope"></i> Messages
+                </button>
+                <button class="nav-button" onclick="window.location.href='/profile'">
+                    <i class="fas fa-user-circle"></i> Profile
+                </button>
+                <button class="nav-button logout-button" id="logout-button-sidebar">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </nav>
+        </aside>
+        <main class="content post-detail-content">
+            <div id="postDetailContainer">
+                <p class="loading-message">Loading post...</p>
+            </div>
+
+            <div class="comment-modal-overlay" id="commentModalOverlay">
+                <div class="comment-modal-content">
+                    <button class="comment-modal-close" id="commentModalClose">&times;</button>
+                    <h3>Comments</h3>
+                    <div class="comments-list" id="commentsList">
+                        <p class="no-comments-message" style="display: none;">No comments yet. Be the first to comment!</p>
+                    </div>
+                    <div class="comment-input-area">
+                        <input type="text" id="newCommentInput" placeholder="Add a comment...">
+                        <button id="addCommentButton">Comment</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="/auth.js"></script>
+    <script src="/post_detail.js"></script>
+</body>
+</html>

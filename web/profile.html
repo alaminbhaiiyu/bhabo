@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - Bhabo</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">Bhabo</div>
+            <nav class="main-nav">
+                <button class="nav-button" onclick="window.location.href='/'">Home</button>
+                <button class="nav-button">Search</button>
+                <button class="nav-button">Post</button>
+                <button class="nav-button">Messages</button>
+                <button class="nav-button active" onclick="window.location.href='/profile'">Profile</button>
+                <button class="nav-button logout-button" id="logout-button-sidebar">Logout</button>
+            </nav>
+        </aside>
+
+        <main class="content profile-content">
+            <div class="profile-header">
+                <img id="myProfilePic" src="/images/default_profile.png" alt="Profile Picture" class="profile-photo">
+                <div class="profile-info">
+                    <h2 id="myDisplayName">Loading Display Name...</h2>
+                    <p class="username-tag">@<span id="myUsername">Loading username...</span></p>
+                    <p id="myBio" class="bio-text">Loading bio...</p> <div class="profile-stats">
+                        <span><strong id="myPostCount">0</strong> Posts</span>
+                        <span><strong id="myFollowersCount">0</strong> Followers</span>
+                        <span><strong id="myFollowingCount">0</strong> Following</span>
+                    </div>
+                    <div class="profile-actions">
+                        <button id="editProfileButton" class="action-button primary-button">Edit Profile</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-settings-panel" id="profileSettingsPanel" style="display: none;">
+                <div class="profile-section settings-section">
+                    <h3>Edit Profile</h3>
+                    <form id="editProfileForm" class="settings-form" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName">
+                        </div>
+                        <div class="form-group">
+                            <label for="displayName">Display Name</label>
+                            <input type="text" id="displayName" name="displayName" placeholder="e.g. John Doe">
+                            <small>Leave blank to use First Name + Last Name.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="profilePictureFile">Upload Profile Photo</label>
+                            <input type="file" id="profilePictureFile" name="profilePicture" accept="image/*">
+                            <small>Max 5MB (JPEG, PNG, GIF).</small>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" id="removeProfilePicture" name="removeProfilePicture" value="true">
+                            <label for="removeProfilePicture">Remove current profile picture</label>
+                        </div>
+                        <div class="form-group">
+                            <label for="bio">Bio</label>
+                            <textarea id="bio" name="bio" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="settings-button save-button">Save Profile</button>
+                        <div id="profileMessage" class="message-box" style="display: none;"></div>
+                    </form>
+                </div>
+
+                <div class="profile-section settings-section">
+                    <h3>Change Password</h3>
+                    <form id="changePasswordForm" class="settings-form">
+                        <div class="form-group">
+                            <label for="currentPassword">Current Password</label>
+                            <input type="password" id="currentPassword" name="currentPassword" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="newPassword">New Password</label>
+                            <input type="password" id="newPassword" name="newPassword" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmNewPassword">Confirm New Password</label>
+                            <input type="password" id="confirmNewPassword" name="confirmNewPassword" required>
+                        </div>
+                        <button type="submit" class="settings-button save-button">Change Password</button>
+                        <div id="passwordMessage" class="message-box" style="display: none;"></div>
+                    </form>
+                </div>
+
+                <div class="profile-section settings-section">
+                    <h3>Account Management</h3>
+                    <button id="deleteAccountButton" class="settings-button delete-button-style">Delete Account</button>
+                    <button id="logoutButtonPanel" class="settings-button delete-button-style" style="background-color: #6c757d;">Logout</button>
+                </div>
+            </div>
+
+            <div class="profile-section">
+                <h3>My Posts</h3>
+                <div id="myPostsContainer" class="user-posts-grid">
+                    <p class="no-posts" style="display: none;">No posts yet.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="./js/auth.js"></script>
+    <script src="./js/profile.js"></script>
+</body>
+</html>

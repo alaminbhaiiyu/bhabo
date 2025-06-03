@@ -1,0 +1,871 @@
+/* web/style.css */
+body {
+    font-family: 'Inter', sans-serif; /* Using Inter font */
+    margin: 0;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    width: 95%; /* Slightly wider container */
+    max-width: 1400px; /* Increased max-width */
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px; /* More rounded corners */
+    margin-top: 25px;
+    min-height: 90vh; /* Ensure it takes up most of the viewport height */
+}
+
+/* Facebook-like Sidebar Styling */
+.sidebar {
+    width: 280px; /* Wider sidebar */
+    padding: 20px 0; /* Adjust padding */
+    border-right: 1px solid #ddd;
+    background-color: #ffffff; /* White background */
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+}
+
+.logo {
+    font-size: 32px; /* Larger logo */
+    font-weight: bold;
+    color: #1877f2; /* Facebook Blue */
+    margin-bottom: 40px; /* More space below logo */
+    text-align: center;
+    padding: 0 20px; /* Add horizontal padding to logo */
+}
+
+.main-nav {
+    width: 100%; /* Full width for navigation */
+    padding: 0 15px; /* Padding for buttons */
+}
+
+.main-nav .nav-button {
+    display: flex; /* For icon and text alignment */
+    align-items: center;
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 8px; /* Slightly less margin */
+    border: none;
+    background-color: transparent;
+    text-align: left;
+    font-size: 1.1em; /* Slightly larger font */
+    color: #333;
+    cursor: pointer;
+    border-radius: 8px; /* More rounded buttons */
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    font-weight: 500;
+}
+
+.main-nav .nav-button i { /* Icon styling */
+    margin-right: 12px; /* Space between icon and text */
+    font-size: 1.3em;
+    color: #666; /* Default icon color */
+}
+
+.main-nav .nav-button:hover {
+    background-color: #f0f2f5; /* Light grey hover */
+    color: #1877f2; /* Blue text on hover */
+    transform: translateX(5px); /* Slight slide effect */
+}
+
+.main-nav .nav-button:hover i {
+    color: #1877f2; /* Blue icon on hover */
+}
+
+.main-nav .nav-button.active {
+    background-color: #e7f3ff; /* Lighter blue for active */
+    color: #1877f2; /* Facebook Blue for active text */
+    font-weight: bold;
+}
+
+.main-nav .nav-button.active i {
+    color: #1877f2; /* Facebook Blue for active icon */
+}
+
+/* Main Content Area */
+.content {
+    flex-grow: 1;
+    padding: 30px;
+    background-color: #f0f2f5; /* Light grey background for content */
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    overflow-y: auto; /* Enable scrolling for the content area */
+    max-height: calc(100vh - 50px); /* Adjust max-height to fit viewport, considering top margin */
+}
+
+.content h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.content p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Message box styles (from auth pages, ensure consistency) */
+.message-box {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: left;
+}
+.message-box.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+.message-box.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+.message-box.info { /* For general info messages */
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}
+
+/* --- Search Bar Styles --- */
+.top-search-bar {
+    display: flex;
+    margin-bottom: 25px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.top-search-bar input[type="text"] {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.top-search-bar input[type="text"]:focus {
+    border-color: #1877f2;
+}
+
+.top-search-bar button {
+    background-color: #1877f2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.top-search-bar button:hover {
+    background-color: #166fe5;
+}
+
+/* --- Search History Styles --- */
+.search-history {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.search-history h3 {
+    color: #4CAF50;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.search-history-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.search-history-list li {
+    background-color: #e7f3ff; /* Light blue */
+    color: #1877f2;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 0.95em;
+    font-weight: 500;
+}
+
+.search-history-list li:hover {
+    background-color: #d1e7ff;
+    transform: translateY(-2px);
+}
+
+/* --- Search Results Styles --- */
+.search-results-container {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.search-results-container h3 {
+    color: #4CAF50; /* Dark Green for section titles */
+    font-size: 1.6em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+.search-results-section {
+    margin-bottom: 30px;
+}
+
+.search-results-section:last-child {
+    margin-bottom: 0;
+}
+
+.search-results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.search-result-card {
+    background-color: #fefefe;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+    text-decoration: none; /* For user cards */
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-result-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.search-result-card.user-card {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    gap: 15px;
+}
+
+.search-result-card.user-card .user-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #4CAF50;
+}
+
+.search-result-card.user-card .user-info {
+    flex-grow: 1;
+}
+
+.search-result-card.user-card .user-info h4 {
+    margin: 0 0 5px 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.search-result-card.user-card .user-info p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.search-result-card.post-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.search-result-card.post-card .post-content {
+    padding: 15px;
+    flex-grow: 1;
+}
+
+.search-result-card.post-card .post-content p {
+    font-size: 0.95em;
+    color: #444;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limit to 3 lines */
+    -webkit-box-orient: vertical;
+}
+
+.no-results-message {
+    text-align: center;
+    color: #777;
+    font-style: italic;
+    padding: 20px;
+    grid-column: 1 / -1; /* Span across all columns */
+}
+
+
+/* --- Home Feed Post Card Styles (Similar to profile posts, but for feed) --- */
+.home-feed-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.feed-post-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+    padding: 20px;
+    position: relative; /* For the three-dot menu */
+}
+
+.feed-post-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.feed-post-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #1877f2;
+}
+
+.feed-post-author-info {
+    flex-grow: 1;
+}
+
+.feed-post-author-info h4 {
+    margin: 0;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.feed-post-author-info p {
+    margin: 0;
+    font-size: 0.85em;
+    color: #777;
+}
+
+.feed-post-content {
+    margin-bottom: 15px;
+}
+
+.feed-post-content p {
+    font-size: 1em;
+    color: #444;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.feed-post-media {
+    width: 100%;
+    max-height: 400px; /* Limit height for feed media */
+    object-fit: contain; /* Use contain to show full image/video */
+    border-radius: 8px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.feed-post-actions {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.feed-post-actions button {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 1em;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.feed-post-actions button i {
+    margin-right: 8px;
+}
+
+.feed-post-actions button:hover {
+    background-color: #f0f2f5;
+    color: #1877f2;
+}
+
+.feed-loading-indicator {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+    font-style: italic;
+    display: none;
+}
+
+/* --- Comment Modal Styles --- */
+.comment-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.comment-modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.comment-modal-content {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 550px;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-height: 90vh; /* Limit height for scrolling */
+}
+
+.comment-modal-overlay.active .comment-modal-content {
+    transform: translateY(0);
+}
+
+.comment-modal-content h3 {
+    color: #1877f2;
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.comments-list {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-right: 10px; /* Space for scrollbar */
+    margin-bottom: 20px;
+}
+
+.comment-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+    background-color: #f8f9fa;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.comment-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.comment-info {
+    flex-grow: 1;
+}
+
+.comment-info h5 {
+    margin: 0 0 5px 0;
+    font-size: 0.95em;
+    color: #333;
+    font-weight: 600;
+}
+
+.comment-info h5 span {
+    font-weight: normal;
+    color: #777;
+    font-size: 0.85em;
+    margin-left: 8px;
+}
+
+.comment-info p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #444;
+    line-height: 1.4;
+}
+
+.comment-actions { /* Styles for like/reply buttons on comments */
+    margin-top: 5px;
+    display: flex;
+    gap: 10px;
+}
+
+.comment-actions button {
+    background: none;
+    border: none;
+    color: #1877f2;
+    font-size: 0.85em;
+    cursor: pointer;
+    padding: 5px 0;
+    transition: text-decoration 0.2s ease;
+}
+
+.comment-actions button:hover {
+    text-decoration: underline;
+}
+
+
+.no-comments-message {
+    text-align: center;
+    color: #777;
+    font-style: italic;
+    padding: 20px;
+}
+
+.comment-input-area {
+    display: flex;
+    gap: 10px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.comment-input-area input[type="text"] {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 1em;
+    outline: none;
+}
+
+.comment-input-area button {
+    background-color: #1877f2;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 0.95em;
+    transition: background-color 0.3s ease;
+}
+
+.comment-input-area button:hover {
+    background-color: #166fe5;
+}
+
+.comment-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.8em;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.comment-modal-close:hover {
+    color: #333;
+}
+
+/* --- Post Options Menu (Three-dot menu) --- */
+.post-options-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
+.post-options-button {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: #666;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+}
+
+.post-options-button:hover {
+    background-color: #f0f2f5;
+}
+
+.post-options-dropdown {
+    position: absolute;
+    top: 40px; /* Below the button */
+    right: 0;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    min-width: 150px;
+    overflow: hidden;
+    display: none; /* Hidden by default */
+}
+
+.post-options-dropdown button {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    background: none;
+    text-align: left;
+    font-size: 0.95em;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.post-options-dropdown button:hover {
+    background-color: #f0f0f0;
+}
+
+.post-options-dropdown button.delete-option {
+    color: #f44336;
+}
+.post-options-dropdown button.delete-option:hover {
+    background-color: #f8d7da;
+}
+
+
+/* --- Find Friends Section Styles --- */
+.find-friends-section {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.find-friends-section h3 {
+    color: #1877f2; /* Blue for section titles */
+    font-size: 1.6em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+.find-friends-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Smaller cards for friends */
+    gap: 15px;
+}
+
+.find-friend-card {
+    background-color: #fefefe;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.find-friend-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.find-friend-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid #4CAF50; /* Green border for online */
+    position: relative;
+}
+
+.find-friend-avatar.offline {
+    border-color: #999; /* Grey border for offline */
+}
+
+.find-friend-status-indicator {
+    width: 15px;
+    height: 15px;
+    background-color: #4CAF50; /* Green for online */
+    border-radius: 50%;
+    border: 3px solid white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(25%, 25%);
+}
+
+.find-friend-avatar.offline .find-friend-status-indicator {
+    background-color: #999; /* Grey for offline */
+}
+
+.find-friend-card h4 {
+    margin: 0 0 5px 0;
+    font-size: 1.1em;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.find-friend-card p {
+    margin: 0;
+    font-size: 0.85em;
+    color: #666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+/* Responsive adjustments for overall layout */
+@media (max-width: 1024px) {
+    .container {
+        width: 98%;
+        margin-top: 15px;
+        min-height: 95vh;
+    }
+    .sidebar {
+        width: 220px;
+        padding: 15px 0;
+    }
+    .logo {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    .main-nav .nav-button {
+        font-size: 1em;
+        padding: 10px 12px;
+    }
+    .main-nav .nav-button i {
+        font-size: 1.2em;
+        margin-right: 10px;
+    }
+    .content {
+        padding: 20px;
+    }
+    .top-search-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .top-search-bar input[type="text"],
+    .top-search-bar button {
+        width: 100%;
+        margin-left: 0;
+    }
+    .comment-modal-content {
+        max-width: 90%;
+    }
+    .find-friends-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 0;
+        border-radius: 0;
+        min-height: 100vh;
+    }
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        border-radius: 0;
+        padding: 15px 0;
+        flex-direction: row; /* Horizontal navigation on mobile */
+        justify-content: space-around;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+    .logo {
+        display: none; /* Hide logo on small screens for more space */
+    }
+    .main-nav {
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+        width: 100%;
+    }
+    .main-nav .nav-button {
+        flex-direction: column; /* Stack icon and text */
+        padding: 8px 5px;
+        margin-bottom: 0;
+        border-radius: 0;
+        font-size: 0.8em;
+        text-align: center;
+        flex: 1; /* Distribute space evenly */
+    }
+    .main-nav .nav-button i {
+        margin-right: 0;
+        margin-bottom: 5px;
+        font-size: 1.5em;
+    }
+    .content {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        padding: 15px;
+    }
+    .search-results-grid {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+    .post-options-container {
+        top: 10px;
+        right: 10px;
+    }
+    .find-friends-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+    .find-friend-avatar {
+        width: 60px;
+        height: 60px;
+    }
+    .find-friend-status-indicator {
+        width: 12px;
+        height: 12px;
+    }
+}

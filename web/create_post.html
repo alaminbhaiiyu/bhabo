@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhabo - Create Post</title>
+    <link rel="sty
+    lesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/create_post.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">Bhabo</div>
+            <nav class="main-nav">
+                <button class="nav-button" onclick="window.location.href='/'">
+                    <i class="fas fa-home"></i> Home
+                </button>
+                <button class="nav-button" onclick="window.location.href='/search.html'">
+                    <i class="fas fa-search"></i> Search
+                </button>
+                <button class="nav-button active" onclick="window.location.href='/create_post.html'">
+                    <i class="fas fa-plus-square"></i> Post
+                </button>
+                <button class="nav-button" onclick="window.location.href='/chat.html'">
+                    <i class="fas fa-envelope"></i> Messages
+                </button>
+                <button class="nav-button" onclick="window.location.href='/profile'">
+                    <i class="fas fa-user-circle"></i> Profile
+                </button>
+                <button class="nav-button logout-button" id="logout-button-sidebar">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </nav>
+        </aside>
+        <main class="content create-post-content">
+            <div class="create-post-card">
+                <h3>Create New Post</h3>
+                <form id="createPostForm" class="create-post-form" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="postContent">What's on your mind?</label>
+                        <textarea id="postContent" name="content" rows="7" placeholder="Write your caption here..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="postMediaFile">Upload Photo/Video (Optional)</label>
+                        <input type="file" id="postMediaFile" name="mediaFile" accept="image/*,video/*">
+                    </div>
+                    <div class="media-preview" id="postMediaPreview" style="display: none;">
+                        <img id="postImagePreview" src="" alt="Media Preview" style="display: none;">
+                        <video id="postVideoPreview" src="" controls style="display: none;"></video>
+                        <button type="button" id="removeMediaButton">Remove Media</button>
+                    </div>
+                    <button type="submit">Post</button>
+                    <div id="postMessage" class="message-box" style="display: none;"></div>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="./js/auth.js"></script>
+    <script src="./js/create_post.js"></script> </body>
+</html>

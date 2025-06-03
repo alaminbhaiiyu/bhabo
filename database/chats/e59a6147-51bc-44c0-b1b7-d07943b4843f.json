@@ -1,0 +1,16 @@
+{
+  "_id": "e59a6147-51bc-44c0-b1b7-d07943b4843f",
+  "participants": [
+    "aaa",
+    "aaaa"
+  ],
+  "lastMessage": {
+    "sender": "aaaa",
+    "content": "fuck",
+    "type": "text",
+    "timestamp": "2025-06-03T09:52:10.680Z",
+    "read": true
+  },
+  "createdAt": "2025-06-02T17:29:05.249Z",
+  "updatedAt": "2025-06-03T09:52:10.680Z"
+}

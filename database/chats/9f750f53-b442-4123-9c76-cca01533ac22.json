@@ -1,0 +1,16 @@
+{
+  "_id": "9f750f53-b442-4123-9c76-cca01533ac22",
+  "participants": [
+    "aaa",
+    "alit"
+  ],
+  "lastMessage": {
+    "sender": "aaa",
+    "content": "hlw",
+    "type": "text",
+    "timestamp": "2025-06-03T09:35:50.465Z",
+    "read": false
+  },
+  "createdAt": "2025-06-03T09:23:59.328Z",
+  "updatedAt": "2025-06-03T09:35:50.465Z"
+}

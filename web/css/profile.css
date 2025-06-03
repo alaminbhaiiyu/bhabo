@@ -1,0 +1,335 @@
+/* web/profile.css */
+
+/* General Profile Page Layout */
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    background-color: #f8f9fa; /* Light background for content area */
+    border-radius: 8px;
+}
+
+/* Profile Header Section */
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    position: relative; /* For settings button positioning */
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #061b361e; /* Dark Green border */
+    box-shadow: 0 0 0 6px rgba(29, 77, 236, 0.3); /* Green glow effect */
+}
+
+.profile-info {
+    flex-grow: 1;
+    display: flex; /* Use flexbox for internal layout */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+}
+
+.profile-header h2 {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.username-tag {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+.profile-header .bio-text { /* New style for bio in header */
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 15px; /* Space below bio */
+    line-height: 1.5;
+}
+
+.profile-stats {
+    display: flex;
+    gap: 25px;
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.profile-stats strong {
+    color: #727d8b; /* Dark Green for counts */
+    font-size: 1.2em;
+    font-weight: 800;
+}
+
+/* Action Buttons (Follow/Message/Edit) */
+.profile-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.action-button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.05em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.follow-button {
+    background-color: #25599c; /* Dark Green */
+    color: white;
+}
+
+.follow-button:hover {
+    background-color: #1877f2;
+    transform: translateY(-2px);
+}
+
+.unfollow-button {
+    background-color: #97352e; /* Red for unfollow */
+    color: white;
+}
+
+.unfollow-button:hover {
+    background-color: #d81e11ce;
+    transform: translateY(-2px);
+}
+
+.message-button {
+    background-color: #26292cda; /* Blue for message */
+    color: white;
+}
+
+.message-button:hover {
+    background-color: #242e36;
+    transform: translateY(-2px);
+}
+
+.primary-button { /* For "Go to My Profile" and "Edit Profile" */
+    background-color: #607D8B; /* Grey-blue */
+    color: white;
+}
+
+.primary-button:hover {
+    background-color: #455a64;
+    transform: translateY(-2px);
+}
+
+/* Bio Section (This section is now optional if bio is in header) */
+.profile-section {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.profile-section h3 {
+    color: #1877f2; /* Dark Green for section titles */
+    font-size: 1.6em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+.profile-section p {
+    color: #444;
+    line-height: 1.6;
+}
+
+/* Settings and Forms */
+.settings-section {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.settings-form .form-group {
+    margin-bottom: 18px;
+}
+
+.settings-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.settings-form input[type="text"],
+.settings-form input[type="password"],
+.settings-form input[type="file"],
+.settings-form textarea {
+    width: calc(100% - 24px); /* Account for padding */
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1em;
+    color: #333;
+    background-color: #fefefe;
+    transition: border-color 0.3s ease;
+}
+
+.settings-form input[type="text"]:focus,
+.settings-form input[type="password"]:focus,
+.settings-form textarea:focus {
+    border-color: #1877f2;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+}
+
+.settings-form small {
+    display: block;
+    margin-top: 5px;
+    color: #777;
+    font-size: 0.9em;
+}
+
+.settings-button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.05em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px; /* Space from inputs */
+}
+
+.save-button {
+    background-color: #1877f2; /* Dark Green */
+    color: white;
+}
+
+.save-button:hover {
+    background-color: #1877f2;
+    transform: translateY(-2px);
+}
+
+.delete-button-style { /* For Delete Account button */
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-top: 15px;
+}
+
+.delete-button-style:hover {
+    background-color: #da190b;
+    transform: translateY(-2px);
+}
+
+/* Post Grid */
+.user-posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.post-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    transition: transform 0.2s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+}
+
+.post-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.post-content-area {
+    padding: 15px;
+}
+
+.post-card p {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.post-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+    color: #777;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+.no-posts {
+    text-align: center;
+    color: #777;
+    font-style: italic;
+    grid-column: 1 / -1; /* Span across all columns */
+    padding: 20px;
+}
+
+/* Settings Panel (for my profile) */
+.profile-settings-panel {
+    display: flex;
+    flex-direction: column; /* Stack sections vertically */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .profile-info {
+        text-align: center;
+    }
+    .profile-stats {
+        justify-content: center;
+        gap: 15px;
+    }
+    .profile-actions {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+    }
+    .profile-header h2 {
+        font-size: 1.8em;
+    }
+    .profile-stats {
+        font-size: 0.9em;
+    }
+    .action-button {
+        padding: 10px 20px;
+        font-size: 0.95em;
+    }
+    .user-posts-grid {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+}

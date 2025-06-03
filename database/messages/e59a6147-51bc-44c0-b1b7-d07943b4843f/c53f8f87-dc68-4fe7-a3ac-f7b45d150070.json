@@ -1,0 +1,11 @@
+{
+  "_id": "c53f8f87-dc68-4fe7-a3ac-f7b45d150070",
+  "chatId": "e59a6147-51bc-44c0-b1b7-d07943b4843f",
+  "senderId": "aaa",
+  "receiverId": "aaaa",
+  "content": "de sala",
+  "type": "image",
+  "mediaUrl": "/images/chat_media/e59a6147-51bc-44c0-b1b7-d07943b4843f/aaa-1748943813607.jpg",
+  "timestamp": "2025-06-03T09:43:33.635Z",
+  "read": true
+}

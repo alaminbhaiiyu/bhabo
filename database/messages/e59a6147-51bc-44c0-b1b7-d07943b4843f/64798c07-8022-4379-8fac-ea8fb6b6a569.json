@@ -1,0 +1,11 @@
+{
+  "_id": "64798c07-8022-4379-8fac-ea8fb6b6a569",
+  "chatId": "e59a6147-51bc-44c0-b1b7-d07943b4843f",
+  "senderId": "aaa",
+  "receiverId": "aaaa",
+  "content": "hy",
+  "type": "text",
+  "mediaUrl": null,
+  "timestamp": "2025-06-03T04:40:36.855Z",
+  "read": true
+}

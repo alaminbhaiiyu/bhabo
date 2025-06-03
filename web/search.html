@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhabo - Search</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">Bhabo</div>
+            <nav class="main-nav">
+                <button class="nav-button" onclick="window.location.href='/'">
+                    <i class="fas fa-home"></i> Home
+                </button>
+                <button class="nav-button active" id="search-nav-button">
+                    <i class="fas fa-search"></i> Search
+                </button>
+                <button class="nav-button">
+                    <i class="fas fa-plus-square"></i> Post
+                </button>
+                <button class="nav-button">
+                    <i class="fas fa-envelope"></i> Messages
+                </button>
+                <button class="nav-button" onclick="window.location.href='/profile'">
+                    <i class="fas fa-user-circle"></i> Profile
+                </button>
+                <button class="nav-button logout-button" id="logout-button-sidebar">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </nav>
+        </aside>
+        <main class="content">
+            <div class="top-search-bar">
+                <input type="text" id="searchInput" placeholder="Search Bhabo...">
+                <button id="searchButton"><i class="fas fa-search"></i> Search</button>
+            </div>
+
+            <div class="search-history" id="searchHistorySection">
+                <h3>Search History</h3>
+                <ul class="search-history-list" id="searchHistoryList">
+                    <p class="no-results-message" id="noHistoryMessage" style="display: none;">No search history yet.</p>
+                </ul>
+            </div>
+
+            <div class="find-friends-section" id="findFriendsSection">
+                <h3>Find Friends</h3>
+                <div class="find-friends-grid" id="findFriendsGrid">
+                    <p class="no-results-message" id="noFindFriendsMessage" style="display: none;">No active users found.</p>
+                </div>
+            </div>
+
+            <div class="search-results-container" id="searchResultsContainer" style="display: none;">
+                <div class="search-results-section" id="accountResultsSection">
+                    <h3>Accounts</h3>
+                    <div class="search-results-grid" id="accountResultsGrid">
+                        <p class="no-results-message" id="noAccountResults" style="display: none;">No matching accounts found.</p>
+                    </div>
+                </div>
+
+                <div class="search-results-section" id="imageResultsSection">
+                    <h3>Matching Images</h3>
+                    <div class="search-results-grid" id="imageResultsGrid">
+                        <p class="no-results-message" id="noImageResults" style="display: none;">No matching images found.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="./js/auth.js"></script>
+    <script src="./js/search.js"></script>
+</body>
+</html>

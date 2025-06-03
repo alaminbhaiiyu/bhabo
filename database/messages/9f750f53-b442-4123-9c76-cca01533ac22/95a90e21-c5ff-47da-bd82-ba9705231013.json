@@ -1,0 +1,11 @@
+{
+  "_id": "95a90e21-c5ff-47da-bd82-ba9705231013",
+  "chatId": "9f750f53-b442-4123-9c76-cca01533ac22",
+  "senderId": "aaa",
+  "receiverId": "alit",
+  "content": "Hi!",
+  "type": "text",
+  "mediaUrl": null,
+  "timestamp": "2025-06-03T09:23:59.351Z",
+  "read": false
+}

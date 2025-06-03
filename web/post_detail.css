@@ -1,0 +1,124 @@
+/* web/post_detail.css */
+
+.post-detail-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 30px;
+}
+
+#postDetailContainer {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    padding: 30px;
+    width: 100%;
+    max-width: 700px; /* Wider for single post view */
+}
+
+.post-detail-card {
+    /* Reusing feed-post-card styles for consistency */
+    padding: 0; /* Remove internal padding as container has it */
+    box-shadow: none; /* Remove shadow as container has it */
+    border-radius: 0;
+    overflow: visible; /* Allow dropdowns to overflow */
+    position: relative; /* For post options */
+}
+
+.post-detail-card .feed-post-header {
+    margin-bottom: 20px;
+}
+
+.post-detail-card .feed-post-avatar { /* Consistent profile picture size */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #1877f2;
+}
+
+.post-detail-card .feed-post-content {
+    margin-bottom: 20px;
+}
+
+.post-detail-card .feed-post-media {
+    width: 100%; /* Ensure media fills container */
+    max-height: 500px; /* Allow taller media */
+    object-fit: contain; /* Use contain to show full image/video */
+    border-radius: 8px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.post-detail-card .feed-post-actions {
+    margin-top: 20px;
+}
+
+.loading-message {
+    text-align: center;
+    color: #777;
+    font-style: italic;
+    padding: 50px;
+}
+
+/* --- Post Options Menu (Three-dot menu) - Specific to post_detail --- */
+.post-options-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
+.post-options-button {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: #666;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+}
+
+.post-options-button:hover {
+    background-color: #f0f2f5;
+}
+
+.post-options-dropdown {
+    position: absolute;
+    top: 40px; /* Below the button */
+    right: 0;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    min-width: 150px;
+    overflow: hidden;
+    display: none; /* Hidden by default */
+}
+
+.post-options-dropdown button {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    background: none;
+    text-align: left;
+    font-size: 0.95em;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.post-options-dropdown button:hover {
+    background-color: #f0f0f0;
+}
+
+.post-options-dropdown button.delete-option {
+    color: #f44336;
+}
+.post-options-dropdown button.delete-option:hover {
+    background-color: #f8d7da;
+}
+
+/* Inherit comment modal styles from style.css */
